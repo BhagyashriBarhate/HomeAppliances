@@ -1,0 +1,98 @@
+
+
+      
+<% if (typeof username != 'undefined') { %>
+  <%= username %>
+  <% } else {%>
+
+      <% } %>
+      <html>
+
+        <body>
+        
+            <div id="right-panel" class="right-panel">
+        
+                <% include header %>
+        
+                <div class="content pb-0">
+        
+                    <section>
+        
+                        <div class="content">
+                            <div class="animated fadeIn">
+                                <div class="row">
+        
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-header col-12 col-md-12">
+                                                <div class="row">
+                                                    <div class="col-lg-8"><strong class="card-title col-md-8">Category
+                                                            Details</strong></div>
+        
+                                                    <div class="col-lg-4"><a href="/users/addCategory" id="btnnc"
+                                                            class="btn btn-primary pull-right"><i class=" fa fa-plus"> Add
+                                                                Category </i></a></div>
+                                                </div>
+                                            </div>
+        
+        
+                                            <div class="card-body">
+                                                <form action="#" method="post">
+                                                    <div class="form-inline">
+                                                       
+                                                        <!--<button type="button" name="btnall" id="btnall" class="btn btn-primary" style="display: none;"><i class="fa fa-list"></i></button>-->
+                                                    </div>
+                                                </form>
+                                                <% if(cate.length>0) { %>
+                                                    <input type="text" id="myInput" style="width: 200px;" placeholder="search Category" class="form-control col-md-2"
+                                                    required="">&nbsp;&nbsp;
+
+                                                <table id="bootstrap-data-table" class="table table-striped table-bordered">
+        
+        
+                                                    <thead>
+                                                        <tr>
+                                                            <!--   <th>Select</th>  -->
+                                                            <th>Sr.no</th>
+                                                            <th>Name</th>
+                                                            <th>Action</th>
+        
+                                                           
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="myTable">
+                                                        <% for(var i=0; i<cate.length;i++) { %>
+                                                        <tr>
+                                                            <td><%= i+1 %></td>
+                                                            <td><%= cate[i].cname %></td>
+                                                           
+                                                            <td>
+                                                                <a href='/users/editcat/<%= cate[i]._id %>'><i class="fas fa-edit"></i></a>  
+                                                                <!-- <a href='/users/deletecat/<%= cate[i]._id %>'><i class="fa fa-trash" aria-hidden="true"></i></a>     -->
+                                                            </td>
+                                                        </tr>
+                                                        <% } %>
+                                                    </tbody>
+                                                </table>
+                                                <% } else { %>
+                                                No Record Found
+                                                <% } %>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+        
+                                </div>
+                            </div><!-- .animated -->
+                        </div><!-- .content -->
+                    </section>
+        
+        
+                </div>
+        
+                <div class="clearfix"></div>
+            </div>
+        
+        </body>
+        
+        </html>

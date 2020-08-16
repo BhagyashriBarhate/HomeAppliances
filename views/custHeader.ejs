@@ -1,0 +1,173 @@
+
+        <% if (typeof username != 'undefined') { %>
+            <!-- <%= username %> -->
+            <% } else {%>
+
+                <% } %>
+<%- include('custLink'); -%>
+
+
+<div role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+    <header class="primary-mobile">
+                               
+   <div id="header-mobile" class="sh-header-mobile">
+       <div class="sh-header-mobile-navigation">
+           
+   
+           <div class="container">
+               <div class="sh-table">
+                   <div class="sh-table-cell sh-group">
+   
+                                                       <div class="header-logo sh-group-equal">
+                   <a href="https://jevelin.shufflehound.com/shop1/" class="header-logo-container sh-table-small" rel="home">
+                       
+                           <div class="sh-table-cell">
+                               <img class="sh-standard-logo" src="//cdn.jevelin.shufflehound.com/wp-content/uploads/sites/9/2016/11/Logo_shop.png" alt="Jevelin Theme Shop Demo" />
+                               <img class="sh-sticky-logo" src="//cdn.jevelin.shufflehound.com/wp-content/uploads/sites/9/2016/11/Logo_shop.png" alt="Jevelin Theme Shop Demo" />
+                               <img class="sh-light-logo" src="//cdn.jevelin.shufflehound.com/wp-content/uploads/sites/9/2016/11/Logo_shop.png" alt="Jevelin Theme Shop Demo" />
+                           </div>
+   
+                              </a>
+                              username
+               </div>
+   
+       
+                   </div>
+                   <div class="sh-table-cell">
+   
+                                           <nav id="header-navigation-mobile" class="header-standard-position">
+                           <div class="sh-nav-container">
+                               <ul class="sh-nav">
+   
+                                   
+               <li class="menu-item sh-nav-cart sh-nav-special sh-header-builder-main-element-cart">
+                   <a href="#">
+                       <div class="sh-nav-cart-content">
+                           <i class="icon-basket sh-header-builder-main-element-icon"></i>
+                           <div class="sh-header-cart-count cart-icon sh-group">
+                         
+                               <span>6</span>
+   
+                           </div>
+                       </div>
+                       
+                   </a>
+                   
+                   <ul class="sub-menu">
+                       <li class="menu-item menu-item-cart">
+                           <div class="widget woocommerce widget_shopping_cart"><div class="widget_shopping_cart_content"></div></div>
+                       </li>
+                   </ul>
+               </li>							    
+           <li class="menu-item sh-nav-dropdown">
+               <a>
+               <div class="sh-table-full">
+                   <div class="sh-table-cell">
+                       <span class="c-hamburger c-hamburger--htx">
+                           <span>Toggle menu</span>
+                       </span>
+                   </div>
+               </div></a>
+           </li>
+                               </ul>
+                           </div>
+                       </nav>
+   
+                   </div>
+               </div>
+           </div>
+       </div>
+   
+      
+   </div>
+   </header>
+                           <header class="primary-desktop">
+                               
+   <div class="sh-header-height">
+       <div class="sh-header sh-header-1 sh-header-8 sh-sticky-header sh-header-small-icons">
+           <div class="container">
+               <div class="sh-table">
+                   <div class="sh-table-cell sh-group">
+   
+                                                       <div class="header-logo sh-group-equal">
+                   <a href="https://jevelin.shufflehound.com/shop1/" class="header-logo-container sh-table-small" rel="home">
+                       
+                           <div class="sh-table-cell">
+                               <img style="height: 90px;"class="sh-standard-logo"  src="https://dcassetcdn.com/design_img/990673/492142/492142_5511345_990673_image.png" alt="Jevelin Theme Shop Demo" />
+                           </div>
+   
+                                       </a>
+               </div>
+   
+       
+                   </div>
+                   <div class="sh-table-cell">
+   
+                                           <nav id="header-navigation" class="header-standard-position">
+
+                                    <div class="sh-nav-container"><ul id="menu-menu-1" class="sh-nav">
+                                        <li id="menu-item-2826" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2826">
+                                            <a href="/customer/custHomepage" >Home</a>
+                                         </li>
+                                         <li id="menu-item-2826" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2826">
+                                            <a href="/users/contactus" >Contact Us</a>
+                                         </li>
+                                 
+                                         <li id="menu-item-2826" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2826">
+                                            <a href="/customer/custProduct" >Products</a>
+                                         </li>
+
+                                         
+                                         <li id="menu-item-2826" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2826">
+                                            <a href="/users/displayFeedback" >Feedbacks</a>
+                                         </li>
+                                         
+                                         <li id="menu-item-2826" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2826">
+                                            <% if (typeof username != 'undefined') { %>
+                                                <a href="/users/logout">LOGOUT ( <%= username %>)</a>
+                                                <% } else{ %>
+                                                <a href="/users/login">LOGIN</a>
+                                                <% } %>	
+                                         </li>
+           
+                                         
+<!--                                         
+                                          <li id="menu-item-2773" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-2773"><a href="" class="sf-with-ul">My Account</a>
+                                            <ul class="sub-menu" style="display: none;">
+                                                <li id="menu-item-2826" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat current-menu-item menu-item-2826"><a href="/users/displayFeedback">Feedbacks</a></li>
+                                                <li id="menu-item-2827"  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat current-menu-item menu-item-2826"><a href=""">Orders</a></li>
+                                                <li id="menu-item-2826" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat current-menu-item menu-item-2826"><a href="">Logout</a></li>
+
+                                            </ul>
+                                            </li> -->
+                                          
+   </li>
+   <li class="menu-item sh-nav-seperator"><a><i class="icon icon-list"></i></a>
+   </li>
+               <li class="menu-item sh-nav-cart sh-nav-special sh-header-builder-main-element-cart">
+                   <a href="/cart/cart">
+                       <div class="sh-nav-cart-content">
+                           <i class="icon-basket sh-header-builder-main-element-icon"></i>
+                           <label >Cart</label>
+                       </div>
+                       
+                   </a>
+                   
+                 
+               </li>
+              
+           </ul>
+       </div>	
+           </nav>
+   
+                   </div>
+               </div>
+           </div>
+   
+           
+   
+       </div>
+   </div>
+     </header>
+   </div>
+       

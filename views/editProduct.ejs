@@ -1,0 +1,80 @@
+<div>
+    <%- include('header'); -%>
+  
+  <div class="row mt-5">
+    <div class="col-md-12 m-auto">
+      <div class="card card-body">
+        <h1 class="text-center mb-3">
+  
+            <i class=""></i> Edit Product
+         </h1>
+         <form method="post" enctype="multipart/form-data" >
+          <div class="col-md-6 m-auto">
+            <div class="form-group">
+                <label for="name">Add Product</label>
+                <input type="text"   class="form-control"  value="<%= item.pname%>" name="pname" required> </td>
+            </div>
+  
+            <div class="form-group">
+                <label for="file">File</label>
+                <input type="file"  value="a" name="imagename"   class="form-control"  > </td>
+            </div>
+  
+            
+            <div class="form-group">
+                <label for="mobile">Price</label>
+                <input type="text"  class="form-control"  value="<%= item.price%>" name="price" required> </td>
+            </div>
+            <div class="form-group">
+              <label for="mobile">Quantity </label>
+              <input type="text"   class="form-control"  value="<%= item.quantity %>" name="quantity" required> </td>
+          </div>
+          <div class="form-group">
+            <label for="mobile">Warranty </label>
+            <input type="text"   class="form-control"  value="<%= item.warranty %>" name="warranty" required> </td>
+        </div>
+        <input type="submit" class="btn btn-dark">
+  
+          </div>
+          <div class="col-md-6 m-auto">
+            <div class="form-group">
+              <label for="mobile">Discount Percent </label>
+              <input type="text"  value="<%= item.discount %>"  class="form-control" name="discount" required> </td>
+          </div>
+
+          <div class=" form-group">
+            <label for="company" class=" form-control-label">Select Category: </label>
+            <select id="subcategory"  name="subcategory_id" class="form-control">
+                <option>Select subCategory</option>
+                <% for(var i=0; i<item2.length;i++) { %>
+                <option value=<%= item2[i]._id%>><%= item2[i].scname %></option>
+                <% } %>    
+            </select>
+           
+            </div>
+
+           
+          <div class="form-group">
+            <label for="mobile">Color </label>
+            <input type="text"  value="<%= item.color %>" class="form-control" name="color" required> </td>
+        </div>
+  
+  
+         
+          <div class="form-group">
+            <label for="mobile">Description</label>
+            <input type="long"  value="<%= item.desc %>"  class="form-control" name="desc" required> </td>
+        </div>
+        
+            </div>
+  
+            <!-- <input type="button" value="Display" class="btn btn-dark " onclick="window.location='display'"> -->
+            
+    </form>            
+    
+  
+    </div>
+  </div>
+  </div>
+  
+  </div>

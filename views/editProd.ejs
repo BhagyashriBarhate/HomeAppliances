@@ -1,0 +1,83 @@
+<div>
+    <%- include('header'); -%>
+  
+  <div class="row mt-5">
+    <div class="col-md-12 m-auto">
+      <div class="card card-body">
+        <h1 class="text-center mb-3">
+  
+            <i class=""></i> Add Product
+         </h1>
+         <form method="post" >
+          <div class="col-md-6 m-auto">
+            <div class="form-group">
+                <label for="name">Add Product</label>
+                <input type="text"  value="<%= item.pname %>"   class="form-control" name="pname" > </td>
+            </div>
+  
+            
+            <div class=" form-group">
+                <label for="company" class=" form-control-label">Select Category: </label>
+                <select id="subcategory"  name="subcategory_id" class="form-control">
+                    <option>Select subCategory</option>
+                    <% for(var i=0; i<item2.length;i++) { %>
+                    <option value=<%= item2[i]._id%>><%= item2[i].scname %></option>
+                    <% } %>    
+                </select>
+               
+                </div>
+    
+            
+            <div class="form-group">
+                <label for="mobile">Price</label>
+                <input type="text"  value="<%= item.price %>"   class="form-control" name="price" > </td>
+            </div>
+            <div class="form-group">
+              <label for="mobile">Quantity </label>
+              <input type="text"  value="<%= item.quantity %>"  class="form-control" name="quantity" > </td>
+          </div>
+          <div class="form-group">
+            <label for="mobile">Warranty </label>
+            <input type="text" value="<%= item.warranty %>"   class="form-control" name="warranty" > </td>
+        </div>
+        <input type="submit" class="btn btn-dark">
+        <input type="button" value="Display" class="btn btn-dark " onclick="window.location='displayProduct'">
+  
+          </div>
+          <div class="col-md-6 m-auto">
+        
+  
+            <div class="form-group">
+              <label for="mobile">Discount Percent </label>
+              <input type="text"  value="<%= item.discount %>"   class="form-control" name="discount" > </td>
+          </div>
+          <div class="form-group">
+            <label for="mobile">Color </label>
+            <input type="text"  value="<%= item.color %>"   class="form-control" name="color" > </td>
+        </div>
+
+        <div class="form-group">
+            <label for="file">File</label>
+            <input type="file"  class="form-control" name="file" > </td>
+        </div>
+
+  
+  
+         
+          <div class="form-group">
+            <label for="mobile">Description</label>
+
+            <textarea id="w3review" name="desc" rows="4" cols="77"> <%= item.desc %> 
+             </textarea>        </div>
+        
+            </div>
+  
+            
+    </form>            
+    
+  
+    </div>
+  </div>
+  </div>
+  
+  </div>

@@ -1,0 +1,12 @@
+<% if(category.length>0) { %>	
+    <% for(var i=0; i<category.length;i++) { %>
+        
+        <ul class="product-categories">
+            <li class="cat-item cat-item-11">
+                <a href="#"><%= category[i].cname %></a> 
+            </li></ul><br>
+                
+    <% } %>
+<% } else { %>
+    No Product Found!!
+    <% } %>

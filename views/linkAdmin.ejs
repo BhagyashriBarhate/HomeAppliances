@@ -1,0 +1,32 @@
+<link href="https://wrappixel.com/demos/admin-templates/ampleadmin/ample-admin-lite/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Menu CSS -->
+<link href="https://wrappixel.com/demos/admin-templates/ampleadmin/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+<!-- toast CSS -->
+<link href="https://wrappixel.com/demos/admin-templates/ampleadmin/plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
+<!-- morris CSS -->
+<link href="https://wrappixel.com/demos/admin-templates/ampleadmin/plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
+<!-- chartist CSS -->
+<link href="https://wrappixel.com/demos/admin-templates/ampleadmin/plugins/bower_components/chartist-js/dist/chartist.min.css" rel="stylesheet">
+<link href="https://wrappixel.com/demos/admin-templates/ampleadmin/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+<!-- animation CSS -->
+<link href="https://wrappixel.com/demos/admin-templates/ampleadmin/ample-admin-lite/css/animate.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="https://wrappixel.com/demos/admin-templates/ampleadmin/ample-admin-lite/css/style.css" rel="stylesheet">
+<!-- color CSS -->
+<link href="https://wrappixel.com/demos/admin-templates/ampleadmin/ample-admin-lite/css/colors/default.css" id="theme" rel="stylesheet"> 
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->

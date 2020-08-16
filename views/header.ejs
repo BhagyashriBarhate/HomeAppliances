@@ -1,0 +1,208 @@
+<%- include('linkAdmin'); -%>
+
+<div id="wrapper">
+  <!-- ============================================================== -->
+  <!-- Topbar header - style you can find in pages.scss -->
+  <!-- ============================================================== -->
+  <nav class="navbar navbar-default navbar-static-top m-b-0">
+      <div class="navbar-header">
+         
+          <!-- /Logo -->
+          <ul class="nav navbar-top-links navbar-right pull-right">
+              
+                      
+<% if (typeof username != 'undefined') { %>
+<u> <label style="color: white;margin-right: 1000px;margin-top: 10px;"><%= username %></label></u>
+  <% } else {%>
+
+      <% } %>
+              <li>
+                  <a class="profile-pic" href="/users/logout"><b class="fa fa-sign-out">Logout</b></a>
+              </li>
+          </ul>
+      </div>
+      <!-- /.navbar-header -->
+      <!-- /.navbar-top-links -->
+      <!-- /.navbar-static-side -->
+  </nav>
+  <!-- End Top Navigation -->
+  <!-- ============================================================== -->
+  <!-- Left Sidebar - style you can find in sidebar.scss  -->
+  <!-- ============================================================== -->
+  <div class="navbar-default sidebar" role="navigation">
+      <div class="sidebar-nav slimscrollsidebar">
+          <div class="sidebar-head">
+              <h3> <span class="hide-menu">Home Appliences</span></h3>
+
+      
+              <hr>
+          </div>
+          <ul class="nav" id="side-menu">
+              <li style="padding: 80px 0 0;">
+                  <a href="/users/dashboard" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-user fa-fw" aria-hidden="true"></i>Manage Admin
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a href="/users/addAdmin">Add Admin</a>  <br>
+                  <a href="/users/displayAdmin">View Admins</a>  <br>
+                </div>
+              </li>
+
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-first-order" style="margin-right: 11px;" aria-hidden="true"></i>Manage Brand
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a href="/users/add-form">Add Brand</a>  <br>
+                  <a href="/users/display">Display Brand</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-first-order" style="margin-right: 11px;" aria-hidden="true"></i>Manage category
+                </a>
+                
+              <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
+                <a href="/users/addCategory">Add Category</a>  <br>
+                <a href="/users/displayCategory">View Category</a>  <br>
+              
+                </div>
+              </li>
+
+               
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-first-order" style="margin-right: 11px;" aria-hidden="true"></i>ManageSub category
+                </a>
+                
+              <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
+                <a href="/users/addSubcategory">Add subCategory</a>  <br>
+                <a href="/users/displaySubcategory">View Category</a>  <br>
+              
+                </div>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-product-hunt" style="margin-right: 11px;" aria-hidden="true"></i>Manage Product
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a href="/users/addProduct">Add Product</a>  <br>
+                  <a href="/users/displayProduct">View Product</a>  <br>
+                </div>
+              </li>
+            
+             
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-first-order" style="margin-right: 11px;" aria-hidden="true"></i>Manage Orders
+                 </a>
+                <div class="dropdown-menu" style="margin-left: 30px;width: 200px;"  aria-labelledby="navbarDropdown">
+                  <a href="#" >View Orders</a>  <br>
+                </div>
+              </li> -->
+
+              
+              <li>
+                <a href="/users/viewOrdersAdmin" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Orders</a>
+            </li>
+
+              <li>
+                <a href="/users/displayFeedbackAdmin" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Feedbacks</a>
+            </li>
+        
+              <li>
+                <!-- <a href="/users/dashboard" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Logout</a> -->
+            </li>
+      
+          </ul>
+          
+      </div>
+      
+  </div>
+  <!-- ============================================================== -->
+  <!-- End Left Sidebar -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- Page Content -->
+  <!-- ============================================================== -->
+  <div id="page-wrapper">
+      <div class="container-fluid">
+          <!-- <div class="row bg-title">
+              <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                  <h4 class="page-title">Dashboard</h4> </div>
+              <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                  <a href="https://wrappixel.com/templates/ampleadmin/" target="_blank" class="btn btn-danger pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light">Upgrade to Pro</a>
+                  <ol class="breadcrumb">
+                      <li><a href="#">Dashboard</a></li>
+                  </ol>
+              </div>
+               /.col-lg-12
+          </div> -->
+          <!-- /.row -->
+          <!-- ============================================================== -->
+          <!-- Different data widgets -->
+          <!-- ============================================================== -->
+          <!-- .row -->
+          <!-- <div class="row">
+              <div class="col-lg-4 col-sm-6 col-xs-12">
+                  <div class="white-box analytics-info">
+                      <h3 class="box-title">Total Visit</h3>
+                      <ul class="list-inline two-part">
+                          <li>
+                              <div id="sparklinedash"></div>
+                          </li>
+                          <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success">659</span></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 col-xs-12">
+                  <div class="white-box analytics-info">
+                      <h3 class="box-title">Total Page Views</h3>
+                      <ul class="list-inline two-part">
+                          <li>
+                              <div id="sparklinedash2"></div>
+                          </li>
+                          <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple">869</span></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 col-xs-12">
+                  <div class="white-box analytics-info">
+                      <h3 class="box-title">Unique Visitor</h3>
+                      <ul class="list-inline two-part">
+                          <li>
+                              <div id="sparklinedash3"></div>
+                          </li>
+                          <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info">911</span></li>
+                      </ul>
+                  </div>
+              </div>
+          </div> -->
+          <!--/.row -->
+          <!--row -->
+          <!-- /.row -->
+          <!-- <div class="row">
+              <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                  <div class="white-box">
+                      <h3 class="box-title">Products Yearly Sales</h3>
+                      <ul class="list-inline text-right">
+                          <li>
+                              <h5><i class="fa fa-circle m-r-5 text-info"></i>Mac</h5> </li>
+                          <li>
+                              <h5><i class="fa fa-circle m-r-5 text-inverse"></i>Windows</h5> </li>
+                      </ul>
+                      <div id="ct-visits" style="height: 405px;"></div>
+                  </div>
+              </div>
+          </div>
+          </div>
+           -->
+           <footer class="footer text-center">  Copyright &copy; 2020  Admin </footer>

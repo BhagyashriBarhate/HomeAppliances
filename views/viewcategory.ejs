@@ -1,0 +1,44 @@
+<div id="sidebar" class="sidebar-left">
+
+    <div id="woocommerce_product_search-2"
+        class="widget-item woocommerce widget_product_search">
+        <div class="widget_search">
+            <form role="search" method="get" class="search-form"
+                action="https://jevelin.shufflehound.com/shop1/">
+                <div>
+                    <label>
+                        <!-- <input type="search" class="sh-sidebar-search search-field"
+                            placeholder="Search products..." value="" name="s"
+                            title="Search for:" required /> -->
+                    </label>
+                    <!-- <button type="submit" class="search-submit">
+                        <i class="icon-magnifier"></i>
+                    </button> -->
+                </div>
+                <input type="hidden" name="post_type" value="product" />
+            </form>
+        </div>
+    </div>
+    <div id="woocommerce_product_categories-2"
+        class="widget-item woocommerce widget_product_categories"><hr>
+        <h3 class="widget-title"><b>Product Categories</b></h3>
+
+        <% if(category.length>0 ) { %>
+        <% for(var i=0; i<category.length;i++) { %>
+
+        <ul class="product-categories">
+            <li class="cat-item cat-item-11">
+                <a href='/customer/getcate/<%= category[i]._id %>'><%= category[i].cname %></a><hr>
+            </li>
+        </ul><br>
+
+        <% } %>
+        <% } else { %>
+        No Product Found!!
+        <% } %>
+
+
+
+    </div>
+  
+</div>
